@@ -80,16 +80,27 @@ h2{
 	font-weight: 700;
 }
 
+h3{
+	font-size: 18px;
+	font-weight: 700;
+}
+
 /* specific rowls */
 
 #logo{
 	margin-bottom: 12px;
 }
+
+/* réservation */
 .booking{
 	background-color: #f6f6f6;
 	padding-bottom: 58px;
 	margin-bottom: 52px;
 }
+.search-bar{
+	display: flex;
+}
+
 
 #search{
 	text-align: center;
@@ -115,6 +126,7 @@ h1{
 
 .functioning-card-item{
 	display: flex;
+	font-weight: 700;
 	width: 80%;
 	background-color: #f5edff;
 	border-radius: 20px;
@@ -133,4 +145,21 @@ h1{
 .functioning-card-item i{
 	margin-right: 27px;
 	margin-left: 18px;
+}
+
+/* restaurants */
+
+.restaurante, footer{
+	background-color: #f5edff;
+	padding-top: 54px;
+}
+.retaurante-item{
+	background-color: #fff;
+}
+.retaurante-item img{
+	max-width: 88%;
+	border-radius: 10px 10px 0px 0px;
+}
+#footer-heading{
+	font-family: 'Shrikhand', cursive;
 }

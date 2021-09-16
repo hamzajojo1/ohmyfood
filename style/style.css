@@ -82,6 +82,14 @@ input{
 	padding: 18px 24px;
 	border-radius: 30px;
 	font-weight: 700;
+	box-shadow: 4px 4px 6px #aaa;
+	cursor: pointer;
+	text-align: center;
+	letter-spacing: 1px;
+}
+.button-menu{
+	padding: 18px 0px;
+	width: 38%;
 }
 
 h1{
@@ -90,7 +98,7 @@ h1{
 	margin-bottom: 24px;
 }
 h2{
-	font-size: 20px;
+	font-size: 22px;
 	font-weight: 700;
 }
 
@@ -100,10 +108,22 @@ h3{
 	margin-bottom: 10px;
 }
 
+h4{
+	font-size: 17px;
+	font-weight: 700;
+	margin-bottom: 8px;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+
 /* specific rowls */
 
-#logo{
+.logo{
 	margin-bottom: 12px;
+	text-align: center;
+	margin: 10px 0;
 }
 
 /* search */
@@ -124,6 +144,7 @@ h3{
 	padding-top: 42px;
 }
 .subtitle{
+	line-height: 20px;
 	margin-bottom: 32px;
 }
 /* Fonctionnement */
@@ -141,6 +162,8 @@ h3{
 	padding: 35px 0;
 	margin: 0 auto;
 	margin-bottom: 24px;
+	box-shadow: 1px 2px 8px 2px #c4c4c4;
+	cursor: pointer;
 }
 
 .functioning-card-item span{
@@ -206,10 +229,15 @@ h3{
 	display: inline-block;
 	font-size: 30px;
 }
+.restaurante-choice i:hover{
+	background-image: linear-gradient(right#9356DC,#FF79DA);
+}
 .retaurante-item p{
 	text-align: left;
 	padding-left: 10px;
 }
+
+/* footer */
 
 footer{
 	background-color: #353535;
@@ -231,4 +259,70 @@ footer p{
 #footer-heading{
 	font-family: 'Shrikhand', cursive;
 	margin-bottom: 34px;
+}
+
+/* Menu à la française */
+
+main figure img{
+	width: 100%;
+}
+
+.french-menu{
+	background-color: #eaeaea;
+	width: 100%;
+	padding-top: 42px;
+	padding-bottom: 84px;
+	border-radius: 50px 50px 0 0;
+}
+
+.menu-title{
+	display: flex;
+	justify-content: space-between;
+	font-family: 'Shrikhand', cursive;
+	margin: 46px 18px;
+}
+
+.menu-title h2{
+	font-size: 25px;
+} 
+
+.menu-title i{
+	font-size: 20px;
+}
+
+.menu{
+	width: 90%;
+	margin: 0 auto;
+}
+
+.menu h3{
+	margin-bottom: 26px;
+}
+
+.menu h3::after{
+	content: '';
+	border-bottom: 3px solid #99E2D0;
+	width: 40px;
+	display: block;
+	margin-top: 10px;
+}
+
+.menu-price{
+	background-color: #fff;
+	padding: 16px 10px;
+	border-radius: 20px;
+	margin:16px 0;
+	box-shadow: 4px 4px 6px #aaa;
+}
+
+.type-price{
+	display: flex;
+	justify-content: space-between;
+}
+
+.type-price span{
+	font-weight: 700;
+}
+.menu-specific{
+	margin-bottom: 50px;
 }

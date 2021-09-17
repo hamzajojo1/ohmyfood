@@ -71,13 +71,14 @@ input{
 	padding: 16px 0;
 	text-align: center;
 	width: 30%;
+	box-shadow: inset 0px 5px 5px 0px #dddddd;
 }
 
 
 .button{
 	color: #fff;
-	background-image: radial-gradient(#9356DC,#FF79DA);
-	width: 50%;
+	background: linear-gradient(to bottom,#9356DC,#FF79DA);
+	width: 218px;
 	margin: auto;
 	padding: 18px 24px;
 	border-radius: 30px;
@@ -132,7 +133,7 @@ a{
 	justify-content: center;
 	align-items: center;
 	background-color: #eaeaea;
-	box-shadow: inset 0px 5px 5px 0px #dddddd;
+	box-shadow:  0px 5px 5px 0px #dddddd;
 }
 
 
@@ -150,20 +151,25 @@ a{
 /* Fonctionnement */
 
 .functioning h2{
-	margin-bottom: 34px;
+	margin: 0px 0px 34px 12px;
+	text-align: left;
 }
 
 .functioning-card-item{
 	display: flex;
 	font-weight: 700;
-	width: 80%;
-	background-color: #f5edff;
+	width: 326px;
+	background-color: #f6f6f6;
 	border-radius: 20px;
-	padding: 35px 0;
+	padding: 33px 0;
 	margin: 0 auto;
 	margin-bottom: 24px;
 	box-shadow: 1px 2px 8px 2px #c4c4c4;
 	cursor: pointer;
+}
+
+.functioning-card-item:hover{
+	background-color: #f2eafb;
 }
 
 .functioning-card-item span{
@@ -177,11 +183,14 @@ a{
 	margin-right: 27px;
 	margin-left: 18px;
 }
+.functioning-card-item .violet-store{
+	color: #9356DC;
+}
 
 /* restaurants */
 
 .restaurante{
-	background-color: #eaeaea;
+	background-color: #f6f6f6;
 	padding-top: 60px;
 	padding-bottom: 60px;
 }
@@ -199,7 +208,6 @@ a{
 	position: relative;
 	border-radius: 10px 10px 10px 10px;
 	margin: 0 auto;
-	padding-bottom: 35px;
 	margin-bottom: 20px;
 	box-shadow: 4px 4px 6px #aaa;
 }
@@ -216,7 +224,7 @@ a{
 .retaurante-item img{
 	width: 100%;
 	border-radius: 10px 10px 0px 0px;
-	max-height: 220px;
+	max-height: 174px;
 	margin-bottom: 10px;
 	
 }
@@ -225,12 +233,26 @@ a{
 	justify-content: space-between;
 	padding: 0 10px;
 }
-.restaurante-choice i{
-	display: inline-block;
-	font-size: 30px;
+.heart-effect .heart{
+	width: 20px;
+	position: relative;
+	z-index: 1;
+	margin: 0;
+	transition: opcity, ease-in-out 100ms 
 }
-.restaurante-choice i:hover{
-	background-image: linear-gradient(right#9356DC,#FF79DA);
+.heart-effect .heart-fill{
+	width: 20px;
+	position: absolute;
+	right: 10px;
+	margin: 0;
+	display: none;
+}
+
+.heart-effect:hover .heart{
+	opacity: 0
+}
+.heart-effect:hover .heart-fill{
+	display: inline;
 }
 .retaurante-item p{
 	text-align: left;
@@ -254,6 +276,11 @@ footer i{
 }
 footer p{
 	margin-bottom: 15px;
+	
+}
+
+footer a{
+	color: #fff;
 }
 
 #footer-heading{
@@ -263,8 +290,11 @@ footer p{
 
 /* Menu à la française */
 
+
+
 main figure img{
 	width: 100%;
+
 }
 
 .french-menu{
@@ -273,6 +303,8 @@ main figure img{
 	padding-top: 42px;
 	padding-bottom: 84px;
 	border-radius: 50px 50px 0 0;
+	position: relative;
+	bottom: 49px;
 }
 
 .menu-title{
@@ -325,4 +357,58 @@ main figure img{
 }
 .menu-specific{
 	margin-bottom: 50px;
+}
+
+.spinner{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+/* spinner */
+
+.letter{
+	font-family: 'Shrikhand', cursive;
+	font-size: 40px;
+	color: #fff;
+	letter-spacing: 5px;
+	animation: flash 4s linear forwards;
+}
+
+@keyframes flash{
+	0%{
+		color: #9356DC;
+		text-shadow: 0 0 10 #eaeaea;
+		transform: rotate(0deg);
+		opacity: 1;
+	}
+	25%{
+		color: #fff;
+		transform: rotate(360deg);
+		opacity: 1;
+	}
+	50%{
+		color: #9356DC;
+		text-shadow: 0 0 10 #eaeaea;
+		transform: rotate(0deg);
+		opacity: 1;
+	}
+	
+	75%{
+		color: #FF79DA;
+		text-shadow: 0 0 10 #eaeaea;
+		transform: rotate(360deg);
+		opacity: 1;
+		display: none;
+	}
+
+	100%{
+		color: #fff;
+		transform: rotate(0deg);
+		opacity: 0;
+	}
 }

@@ -17,6 +17,16 @@
 </head>
 
 <body>
+     <div class="spinner">
+        <span class="letter">O</span>
+        <span class="letter">h</span>
+        <span class="letter">m</span>
+        <span class="letter">y</span>
+        <span class="letter">f</span>
+        <span class="letter">o</span>
+        <span class="letter">o</span>
+        <span class="letter">d</span>
+    </div>
     <!--Logo-->
     <header class="logo">
         <a href="index.html"><img src="images/logo/ohmyfood@2x.svg" alt="Logo ohmyfood"></a>
@@ -51,7 +61,7 @@
                     </div>
                     <div class="functioning-card-item">
                         <span>3</span>
-                        <i class="fas fa-store"></i>
+                        <i class="fas fa-store violet-store"></i>
                         <p>Dégustez au restaurant</p>
                     </div>
 
@@ -63,19 +73,26 @@
                 <h2>Restaurants</h2>
                 <div class="retaurante-item ">
                     <span>Nouveau</span>
-                    <a href="menu-Lapalette-du-gout.html">
+                    
                         <figure>
-                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                                alt="La palette du goût">
+                            <a href="menu-Lapalette-du-gout.html">
+                                <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"alt="La palette du goût">
+                            </a>
                             <figcaption>
                                 <div class="restaurante-choice">
-                                    <h3>La palette du goût</h3>
-                                    <i class="far fa-heart"></i>
+                                    <a href="menu-Lapalette-du-gout.html">
+                                        <h3>La palette du goût</h3>
+                                    </a>
+                                    <div class="heart-effect">
+                                        <img class="heart" src="images/logo/heart-regular.svg" alt="logo contour">
+                                        <img class="heart-fill" src="images/logo/heart-color.svg" alt="logo couleur">
+                                    </div>
+                                    
                                 </div>
                                 <p>Ménilmontant</p>
                             </figcaption>
                         </figure>
-                    </a>
+                    
 
                 </div>
 
@@ -87,7 +104,10 @@
                             <figcaption>
                                 <div class="restaurante-choice">
                                     <h3>La note enchantée</h3>
-                                    <i class="far fa-heart"></i>
+                                    <div class="heart-effect">
+                                        <img class="heart" src="images/logo/heart-regular.svg" alt="logo contour">
+                                        <img class="heart-fill" src="images/logo/heart-color.svg" alt="logo couleur">
+                                    </div>
                                 </div>
                                 <p>Charonne</p>
                             </figcaption>
@@ -103,7 +123,10 @@
                             <figcaption>
                                 <div class="restaurante-choice">
                                     <h3>À la française</h3>
-                                    <i class="far fa-heart"></i>
+                                    <div class="heart-effect">
+                                        <img class="heart" src="images/logo/heart-regular.svg" alt="logo contour">
+                                        <img class="heart-fill" src="images/logo/heart-color.svg" alt="logo couleur">
+                                    </div>
                                 </div>
                                 <p>Cité Rouge</p>
                             </figcaption>
@@ -120,7 +143,10 @@
                             <figcaption>
                                 <div class="restaurante-choice">
                                     <h3>Le délice des sens</h3>
-                                    <i class="far fa-heart"></i>
+                                    <div class="heart-effect">
+                                        <img class="heart" src="images/logo/heart-regular.svg" alt="logo contour">
+                                        <img class="heart-fill" src="images/logo/heart-color.svg" alt="logo couleur">
+                                    </div>
                                 </div>
                                 <p>Foile-Méricourt</p>
                             </figcaption>
@@ -142,14 +168,16 @@
         <div>
             <div class="footer-service">
                 <i class="fas fa-utensils"></i>
-                <p>Proposer un restaurant</p>
+                <p> <a href="#">Proposer un restaurant</a></p>
             </div>
+            
             <div class="footer-service">
                 <i class="fas fa-hands-helping"></i>
-                <p>Devenir partenaire</p>
+                <p><a href="#">Devenir partenaire</a></p>
             </div>
-            <p>Mentions légales</p>
-            <p>Contact</p>
+
+            <p><a href="#">Mentions légales</a></p>
+            <p><a href="#">Contact</a></p>
         </div>
     </footer>
 

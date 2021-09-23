@@ -55,6 +55,7 @@ table {
 
 body{
     font-family: 'Roboto', sans-serif;
+	max-width: 375px;
 }
 .container{
 	width: 375px;
@@ -83,10 +84,12 @@ input{
 	padding: 18px 24px;
 	border-radius: 30px;
 	font-weight: 700;
-	box-shadow: 4px 4px 6px #aaa;
 	cursor: pointer;
 	text-align: center;
 	letter-spacing: 1px;
+}
+.button:hover{
+	box-shadow: 4px 4px 6px #aaa;
 }
 .button-menu{
 	padding: 18px 0px;
@@ -119,6 +122,7 @@ a{
 	color: #000;
 }
 
+
 /* specific rowls */
 
 .logo{
@@ -148,6 +152,8 @@ a{
 	line-height: 20px;
 	margin-bottom: 32px;
 }
+
+
 /* Fonctionnement */
 
 .functioning h2{
@@ -233,6 +239,13 @@ a{
 	justify-content: space-between;
 	padding: 0 10px;
 }
+
+.retaurante-item p{
+	text-align: left;
+	padding-left: 10px;
+}
+
+/* heart */
 .heart-effect .heart{
 	width: 20px;
 	position: relative;
@@ -240,6 +253,7 @@ a{
 	margin: 0;
 	transition: opcity, ease-in-out 100ms 
 }
+
 .heart-effect .heart-fill{
 	width: 20px;
 	position: absolute;
@@ -254,10 +268,7 @@ a{
 .heart-effect:hover .heart-fill{
 	display: inline;
 }
-.retaurante-item p{
-	text-align: left;
-	padding-left: 10px;
-}
+
 
 /* footer */
 
@@ -288,13 +299,112 @@ footer a{
 	margin-bottom: 34px;
 }
 
-/* Menu à la française */
 
+/* spinner */
+
+.spinner{
+	font-family: 'Shrikhand', cursive;
+	font-size: 40px;
+	color: #fff;
+	letter-spacing: 5px;
+	animation: flash 8s linear forwards;
+	transform: scale(0);
+	text-align: center;
+	opacity: 0.6;
+}
+
+@keyframes flash{
+	0%{
+		color: #9356DC;
+		text-shadow: 0 0 10 #eaeaea;
+		transform: scale(0.5);
+	
+		
+		
+	} 
+	25%{
+		color: #fff;
+		transform: scale(1);
+		text-shadow: 0 0 10 #eaeaea;
+		
+		
+	}
+	50%{
+		color: #9356DC;
+		text-shadow: 0 0 10 #eaeaea;
+		transform: scale(1.5);
+		opacity: 0.8;
+		
+	}
+	
+	75%{
+		color: #FF79DA;
+		text-shadow: 0 0 10 #eaeaea;
+		transform: scale(2);
+	}
+
+	100%{
+		color: #fff;
+		transform: scale(1.5);
+		opacity: 0;
+		display: none;
+		
+	}
+}
+
+.spinner{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header-home, .main-home, .footer-home{
+	animation: page 8s ease-in-out;
+}
+
+@keyframes page{
+	0%{
+		opacity: 0;
+	}
+
+	90%{
+		opacity: 0;
+	}
+
+	100%{
+		opacity: 1;
+	}
+}
+
+/* Menu à la française */
 
 
 main figure img{
 	width: 100%;
+}
 
+.entree{
+	animation: display1 4s forwards;
+	opacity: 0;
+}
+.plats{
+	animation: display1 6s forwards;
+	opacity: 0;
+}
+.desserts{
+	animation: display1 8s forwards;
+	opacity: 0;
+}
+@keyframes display1{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
 }
 
 .french-menu{
@@ -305,6 +415,7 @@ main figure img{
 	border-radius: 50px 50px 0 0;
 	position: relative;
 	bottom: 49px;
+	margin-bottom: -49px;
 }
 
 .menu-title{
@@ -323,12 +434,62 @@ main figure img{
 }
 
 .menu{
-	width: 90%;
 	margin: 0 auto;
+	
+}
+
+.menu p{
+	font-size: 15px;
+}
+
+.menu-price{
+	background-color: #fff;
+	padding: 16px 5px;
+	border-radius: 20px;
+	margin:16px auto;
+	width: 350px;
+	box-shadow: 4px 4px 6px #aaa;
+	position: relative;
+	overflow: hidden;
+	text-align: left;
+}
+
+.check-hidden{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #99E2D0;
+	color: #fff;
+	position: absolute;
+	left: 360px;
+	bottom: 0px;
+	width: 60px;
+	height: 73px;
+	border-radius: 0px 15px 15px 0px;
+	transition: all 300ms ease-in-out;
+
+}
+.menu-price:hover{
+	overflow: visible;
+	transition: all 300ms ease-in-out;
+}
+
+.menu-price:hover .check-hidden{
+	left:300px
+}
+
+.menu-price:hover .type-price span{
+	margin-right: 60px;
+}
+
+.menu-price h4{
+	text-align: left;
 }
 
 .menu h3{
 	margin-bottom: 26px;
+	text-align: left;
+	margin-left: 10px;
 }
 
 .menu h3::after{
@@ -339,14 +500,6 @@ main figure img{
 	margin-top: 10px;
 }
 
-.menu-price{
-	background-color: #fff;
-	padding: 16px 10px;
-	border-radius: 20px;
-	margin:16px 0;
-	box-shadow: 4px 4px 6px #aaa;
-}
-
 .type-price{
 	display: flex;
 	justify-content: space-between;
@@ -354,61 +507,8 @@ main figure img{
 
 .type-price span{
 	font-weight: 700;
+	margin-right: 25px;
 }
 .menu-specific{
 	margin-bottom: 50px;
-}
-
-.spinner{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-
-/* spinner */
-
-.letter{
-	font-family: 'Shrikhand', cursive;
-	font-size: 40px;
-	color: #fff;
-	letter-spacing: 5px;
-	animation: flash 4s linear forwards;
-}
-
-@keyframes flash{
-	0%{
-		color: #9356DC;
-		text-shadow: 0 0 10 #eaeaea;
-		transform: rotate(0deg);
-		opacity: 1;
-	}
-	25%{
-		color: #fff;
-		transform: rotate(360deg);
-		opacity: 1;
-	}
-	50%{
-		color: #9356DC;
-		text-shadow: 0 0 10 #eaeaea;
-		transform: rotate(0deg);
-		opacity: 1;
-	}
-	
-	75%{
-		color: #FF79DA;
-		text-shadow: 0 0 10 #eaeaea;
-		transform: rotate(360deg);
-		opacity: 1;
-		display: none;
-	}
-
-	100%{
-		color: #fff;
-		transform: rotate(0deg);
-		opacity: 0;
-	}
 }

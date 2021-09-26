@@ -53,12 +53,11 @@ table {
 
 /* general rowls */
 
-body{
+body, .container{
     font-family: 'Roboto', sans-serif;
 	max-width: 375px;
 }
 .container{
-	width: 375px;
 	text-align: center;
 }
 
@@ -89,7 +88,8 @@ input{
 	letter-spacing: 1px;
 }
 .button:hover{
-	box-shadow: 4px 4px 6px #aaa;
+	box-shadow: 4px 4px 6px #000011;
+	opacity: 0.7;
 }
 .button-menu{
 	padding: 18px 0px;
@@ -254,10 +254,19 @@ a{
 	transition: opcity, ease-in-out 100ms 
 }
 
+.heart-effect-french{
+	position: relative;
+}
+.heart-fill-french{
+	position: absolute;
+	right: 10px;
+}
+
+
 .heart-effect .heart-fill{
 	width: 20px;
 	position: absolute;
-	right: 10px;
+	right: 0px;
 	margin: 0;
 	display: none;
 }
@@ -299,19 +308,22 @@ footer a{
 	margin-bottom: 34px;
 }
 
-
 /* spinner */
 
 .spinner{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 50px;
 	font-family: 'Shrikhand', cursive;
 	font-size: 40px;
 	color: #fff;
 	letter-spacing: 5px;
 	animation: flash 8s linear forwards;
-	transform: scale(0);
-	text-align: center;
-	opacity: 0.6;
-}
+} 
 
 @keyframes flash{
 	0%{
@@ -345,21 +357,12 @@ footer a{
 
 	100%{
 		color: #fff;
-		transform: scale(1.5);
+		transform: scale(0);
 		opacity: 0;
 		display: none;
-		
 	}
 }
 
-.spinner{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
 
 .header-home, .main-home, .footer-home{
 	animation: page 8s ease-in-out;
@@ -387,23 +390,28 @@ main figure img{
 }
 
 .entree{
-	animation: display1 4s forwards;
+	animation: display1 1s forwards;
 	opacity: 0;
 }
 .plats{
-	animation: display1 6s forwards;
+	animation: display1 2s forwards;
 	opacity: 0;
 }
 .desserts{
-	animation: display1 8s forwards;
+	animation: display1 3s forwards;
 	opacity: 0;
 }
 @keyframes display1{
 	0%{
 		opacity: 0;
+		transform: translateY(4px);
+	}
+	75%{
+		opacity: 0.5;
 	}
 	100%{
 		opacity: 1;
+		transform: translateY(0px);
 	}
 }
 
@@ -470,16 +478,33 @@ main figure img{
 
 }
 .menu-price:hover{
-	overflow: visible;
 	transition: all 300ms ease-in-out;
 }
 
+
+
 .menu-price:hover .check-hidden{
-	left:300px
+	left:300px;
+}
+
+.menu-price.check-hidden i{
+	transition: all 9s ease-in-out;
+}
+.menu-price:hover .check-hidden i{
+	transform: rotate(360deg);
 }
 
 .menu-price:hover .type-price span{
-	margin-right: 60px;
+	margin-right: 100px;
+}
+
+.type-price p{
+	transition: all 4s ease-in-out;
+}
+.menu-price:hover .type-price p{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 .menu-price h4{

@@ -1,0 +1,47 @@
+@media only screen and (max-width : 1440px){
+    .container-desktop{
+        width: 1440px;
+    }
+    .functioning-card{
+        display: flex;
+        justify-content: space-around;
+
+    }
+    .functioning-card-item{
+        display: flex;
+        justify-content: center;
+        width: 450px;
+        text-align: center;
+        padding: 40px 0;
+    }
+
+    .restaurante-desktop{
+        display: flex;
+        flex-wrap:wrap ;
+        justify-content: space-around;
+    }
+    .retaurante-item{
+        width: 35%;
+        height: 300px;
+
+    }
+    .retaurante-item img{
+        max-height: 200px;
+    
+    
+    
+    }
+
+
+@media only screen and (max-width: 767px){
+
+    
+ 
+}
+
+
+
+
+
+
+

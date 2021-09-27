@@ -210,10 +210,10 @@ a{
 .retaurante-item{
 	background-color: #fff;
 	max-width: 90%;
-	height: 254px;
 	position: relative;
 	border-radius: 10px 10px 10px 10px;
 	margin: 0 auto;
+	padding-bottom: 15px;
 	margin-bottom: 20px;
 	box-shadow: 4px 4px 6px #aaa;
 }
@@ -276,6 +276,7 @@ a{
 }
 .heart-effect:hover .heart-fill{
 	display: inline;
+	right: 10px;
 }
 
 

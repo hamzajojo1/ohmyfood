@@ -1,36 +1,34 @@
 @media only screen and (max-width : 1440px){
-    .container-desktop{
-        width: 1440px;
+     /* .container-desktop{
+       min-width: 1440px;
+
     }
     .functioning-card{
         display: flex;
-        justify-content: space-around;
+        
 
     }
     .functioning-card-item{
         display: flex;
         justify-content: center;
-        width: 450px;
-        text-align: center;
-        padding: 40px 0;
+        min-width: 30%;
     }
 
     .restaurante-desktop{
         display: flex;
-        flex-wrap:wrap ;
-        justify-content: space-around;
+        justify-content: space-between;
+        flex-wrap: wrap;
+       
     }
     .retaurante-item{
-        width: 35%;
+        width: 45%;
         height: 300px;
 
     }
-    .retaurante-item img{
-        max-height: 200px;
-    
-    
-    
-    }
+    .img-respo{
+        height: 266px;
+    } */
+}
 
 
 @media only screen and (max-width: 767px){

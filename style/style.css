@@ -53,9 +53,17 @@ table {
 
 /* general rowls */
 
+.logo-menu{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.logo-menu img{
+	margin-right: 55px;
+}
+
 body, .container{
     font-family: 'Roboto', sans-serif;
-	max-width: 375px;
 }
 .container{
 	text-align: center;
@@ -254,15 +262,6 @@ a{
 	transition: opcity, ease-in-out 100ms 
 }
 
-.heart-effect-french{
-	position: relative;
-}
-.heart-fill-french{
-	position: absolute;
-	right: 10px;
-}
-
-
 .heart-effect .heart-fill{
 	width: 20px;
 	position: absolute;
@@ -318,9 +317,8 @@ footer a{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	top: 50px;
 	font-family: 'Shrikhand', cursive;
-	font-size: 40px;
+	font-size: 20px;
 	color: #fff;
 	letter-spacing: 5px;
 	animation: flash 8s linear forwards;
@@ -390,6 +388,31 @@ main figure img{
 	width: 100%;
 }
 
+/* heart */
+.heart-special .heart-h1{
+	width: 30px;
+	position: relative;
+	z-index: 1;
+	margin: 0;
+	transition: opcity, ease-in-out 100ms 
+}
+
+.heart-special .heart-fill-h1{
+	width: 30px;
+	position: absolute;
+	right: 18px;
+	margin: 0;
+	display: none;
+}
+
+.heart-special:hover .heart-h1{
+	opacity: 0
+}
+.heart-special:hover .heart-fill-h1{
+	display: inline;
+}
+
+
 .entree{
 	animation: display1 1s forwards;
 	opacity: 0;
@@ -405,7 +428,7 @@ main figure img{
 @keyframes display1{
 	0%{
 		opacity: 0;
-		transform: translateY(4px);
+		transform: translateY(30px);
 	}
 	75%{
 		opacity: 0.5;
@@ -416,7 +439,7 @@ main figure img{
 	}
 }
 
-.french-menu{
+.special-menu{
 	background-color: #eaeaea;
 	width: 100%;
 	padding-top: 42px;
@@ -478,6 +501,10 @@ main figure img{
 	transition: all 300ms ease-in-out;
 
 }
+
+.check-hidden i{
+	font-size: 25px;
+}
 .menu-price:hover{
 	transition: all 300ms ease-in-out;
 }
@@ -488,11 +515,12 @@ main figure img{
 	left:300px;
 }
 
-.menu-price.check-hidden i{
-	transition: all 9s ease-in-out;
+.menu-price .check-hidden i{
+	transition: all 0.5s ease-in-out;
 }
 .menu-price:hover .check-hidden i{
-	transform: rotate(360deg);
+	transform: rotate(1turn);
+	
 }
 
 .menu-price:hover .type-price span{
@@ -516,6 +544,7 @@ main figure img{
 	margin-bottom: 26px;
 	text-align: left;
 	margin-left: 10px;
+	text-transform: uppercase;
 }
 
 .menu h3::after{

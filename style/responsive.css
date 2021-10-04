@@ -35,12 +35,12 @@
     }
 
     .retaurante-item{
-        min-width: 35%;
-        height: 280px;
+        min-width: 34%;
+        height: 300px;
         margin-bottom: 40px;
     }
     .retaurante-item .img-respo{
-        min-height: 220px;
+        min-height: 240px;
         }
     /* menu-pages */
 
@@ -52,29 +52,40 @@
     }
     main figure img{
         width: 50%;
-        height: 350px;
         border-radius: 15px;
+        max-height: 430px; 
     }
     .special-menu{
         width: 100%;
         margin: 0 auto;
         bottom: -17px;
+        border-radius: 0;
     }
-    .entree,.plats{
+
+    .entree,.plats,.desserts{
         display: flex;
-        margin-bottom: 30px;
+        align-items: center;
+        padding-bottom: 50px;
         }
+
+    .entree-enchantee{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
     .menu h3{
+        min-width: 88px;
         margin-bottom: 25px;
-        text-align: center;
-      
+    }
+    .menu-specific{
+    margin-bottom: 16px;
     }
         
-   
 
 }
 
-
+/* tablette */
     @media only screen and (min-width : 767px){
         .functioning-card-item{
             width: 70%;

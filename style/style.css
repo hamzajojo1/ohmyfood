@@ -331,7 +331,7 @@ footer a{
 @keyframes flash{
 	0%{
 		color: #9356DC;
-		text-shadow: 0 0 10 #eaeaea;
+		text-shadow: 0 0 0 10 #eaeaea;
 		transform: scale(0.5);
 		
 	}
@@ -339,13 +339,13 @@ footer a{
 	25%{
 		color: #fff;
 		transform: scale(1);
-		text-shadow: 0 0 10 #eaeaea;
+		text-shadow: 0 0 0 10 #eaeaea;
 		
 		
 	}
 	50%{
 		color: #9356DC;
-		text-shadow: 0 0 10 #eaeaea;
+		text-shadow: 0 0 0 10 #eaeaea;
 		transform: scale(1.5);
 		opacity: 0.8;
 		
@@ -353,7 +353,7 @@ footer a{
 	
 	75%{
 		color: #FF79DA;
-		text-shadow: 0 0 10 #eaeaea;
+		text-shadow: 0 0 0 10 #eaeaea;
 		transform: scale(2);
 	}
 

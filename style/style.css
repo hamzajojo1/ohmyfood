@@ -270,6 +270,8 @@ a{
 	display: none;
 }
 
+/* Animation heart */
+
 .heart-effect:hover .heart{
 	opacity: 0
 }
@@ -322,17 +324,18 @@ footer a{
 	color: #fff;
 	letter-spacing: 5px;
 	animation: flash 8s linear forwards;
-} 
+}
+
+/* Animation loader */
 
 @keyframes flash{
 	0%{
 		color: #9356DC;
 		text-shadow: 0 0 10 #eaeaea;
 		transform: scale(0.5);
-	
 		
-		
-	} 
+	}
+
 	25%{
 		color: #fff;
 		transform: scale(1);
@@ -405,6 +408,8 @@ main figure img{
 	display: none;
 }
 
+/* animation heart2 */
+
 .heart-special:hover .heart-h1{
 	opacity: 0
 }
@@ -412,6 +417,7 @@ main figure img{
 	display: inline;
 }
 
+/* Animation apparition menu */
 
 .entree{
 	animation: display1 1s forwards;
@@ -505,11 +511,12 @@ main figure img{
 .check-hidden i{
 	font-size: 25px;
 }
+
+/* Animation check-cercle */
+
 .menu-price:hover{
 	transition: all 300ms ease-in-out;
 }
-
-
 
 .menu-price:hover .check-hidden{
 	left:300px;
